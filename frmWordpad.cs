@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace AbrateEsWordpad
 {
-    public partial class Form1 : Form
+    public partial class frmWordpad : Form
     {
-        public Form1()
+        public frmWordpad()
         {
             InitializeComponent();
         }

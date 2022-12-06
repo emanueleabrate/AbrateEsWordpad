@@ -16,5 +16,10 @@ namespace AbrateEsWordpad
         {
             InitializeComponent();
         }
+
+        private void frmWordpad_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

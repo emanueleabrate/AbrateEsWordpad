@@ -53,6 +53,7 @@
             this.incollaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.ToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.AnnullaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -175,7 +176,8 @@
             this.copiaToolStripButton,
             this.incollaToolStripButton,
             this.toolStripSeparator4,
-            this.ToolStripButton});
+            this.ToolStripButton,
+            this.AnnullaToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -264,6 +266,15 @@
             this.ToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ToolStripButton.Text = "&?";
             // 
+            // AnnullaToolStripButton
+            // 
+            this.AnnullaToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AnnullaToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("AnnullaToolStripButton.Image")));
+            this.AnnullaToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AnnullaToolStripButton.Name = "AnnullaToolStripButton";
+            this.AnnullaToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.AnnullaToolStripButton.Text = "Annulla";
+            // 
             // frmWordpad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -310,6 +321,7 @@
         private System.Windows.Forms.ToolStripButton incollaToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator4;
         private System.Windows.Forms.ToolStripButton ToolStripButton;
+        private System.Windows.Forms.ToolStripButton AnnullaToolStripButton;
     }
 }
 

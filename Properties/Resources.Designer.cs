@@ -59,15 +59,5 @@ namespace AbrateEsWordpad.Properties {
                 resourceCulture = value;
             }
         }
-        
-        /// <summary>
-        ///   Cerca una risorsa localizzata di tipo System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap edit_undo {
-            get {
-                object obj = ResourceManager.GetObject("edit_undo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
     }
 }

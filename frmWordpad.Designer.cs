@@ -63,18 +63,18 @@
             this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
             this.AnnullaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.RipristinaToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
             this.AlignSxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AlignCenterToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AlignRxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AlignGiustifyToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
             this.ElencoPuntToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ElencoNumToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.ImgToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ColorToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FontToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator6 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -223,7 +223,7 @@
             // toolStripSeparator8
             // 
             this.toolStripSeparator8.Name = "toolStripSeparator8";
-            this.toolStripSeparator8.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator8.Size = new System.Drawing.Size(177, 6);
             // 
             // tagliaToolStripMenuItem
             // 
@@ -258,12 +258,12 @@
             // toolStripSeparator9
             // 
             this.toolStripSeparator9.Name = "toolStripSeparator9";
-            this.toolStripSeparator9.Size = new System.Drawing.Size(169, 6);
+            this.toolStripSeparator9.Size = new System.Drawing.Size(177, 6);
             // 
             // selezionatuttoToolStripMenuItem
             // 
             this.selezionatuttoToolStripMenuItem.Name = "selezionatuttoToolStripMenuItem";
-            this.selezionatuttoToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.selezionatuttoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.selezionatuttoToolStripMenuItem.Text = "Seleziona &tutto";
             // 
             // toolStrip1
@@ -394,6 +394,11 @@
             this.RipristinaToolStripButton.Text = "Ripristina";
             this.RipristinaToolStripButton.Click += new System.EventHandler(this.RipristinaToolStripButton_Click);
             // 
+            // toolStripSeparator5
+            // 
+            this.toolStripSeparator5.Name = "toolStripSeparator5";
+            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
+            // 
             // AlignSxToolStripButton
             // 
             this.AlignSxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -402,6 +407,7 @@
             this.AlignSxToolStripButton.Name = "AlignSxToolStripButton";
             this.AlignSxToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignSxToolStripButton.Text = "Allineamento a sinistra";
+            this.AlignSxToolStripButton.Click += new System.EventHandler(this.AlignSxToolStripButton_Click);
             // 
             // AlignCenterToolStripButton
             // 
@@ -411,6 +417,7 @@
             this.AlignCenterToolStripButton.Name = "AlignCenterToolStripButton";
             this.AlignCenterToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignCenterToolStripButton.Text = "Allineamento centrato";
+            this.AlignCenterToolStripButton.Click += new System.EventHandler(this.AlignCenterToolStripButton_Click);
             // 
             // AlignRxToolStripButton
             // 
@@ -420,6 +427,7 @@
             this.AlignRxToolStripButton.Name = "AlignRxToolStripButton";
             this.AlignRxToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignRxToolStripButton.Text = "Allineamento a destra";
+            this.AlignRxToolStripButton.Click += new System.EventHandler(this.AlignRxToolStripButton_Click);
             // 
             // AlignGiustifyToolStripButton
             // 
@@ -429,6 +437,12 @@
             this.AlignGiustifyToolStripButton.Name = "AlignGiustifyToolStripButton";
             this.AlignGiustifyToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignGiustifyToolStripButton.Text = "Allineamento giustificato";
+           
+            // 
+            // toolStripSeparator6
+            // 
+            this.toolStripSeparator6.Name = "toolStripSeparator6";
+            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
             // 
             // ElencoPuntToolStripButton
             // 
@@ -447,6 +461,11 @@
             this.ElencoNumToolStripButton.Name = "ElencoNumToolStripButton";
             this.ElencoNumToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ElencoNumToolStripButton.Text = "Elenco numerato";
+            // 
+            // toolStripSeparator7
+            // 
+            this.toolStripSeparator7.Name = "toolStripSeparator7";
+            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // ImgToolStripButton
             // 
@@ -474,21 +493,6 @@
             this.FontToolStripButton.Name = "FontToolStripButton";
             this.FontToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.FontToolStripButton.Text = "Font";
-            // 
-            // toolStripSeparator5
-            // 
-            this.toolStripSeparator5.Name = "toolStripSeparator5";
-            this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator6
-            // 
-            this.toolStripSeparator6.Name = "toolStripSeparator6";
-            this.toolStripSeparator6.Size = new System.Drawing.Size(6, 25);
-            // 
-            // toolStripSeparator7
-            // 
-            this.toolStripSeparator7.Name = "toolStripSeparator7";
-            this.toolStripSeparator7.Size = new System.Drawing.Size(6, 25);
             // 
             // frmWordpad
             // 

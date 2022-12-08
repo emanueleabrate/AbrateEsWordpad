@@ -25,6 +25,7 @@ namespace AbrateEsWordpad
         {
             fileManager = new clsFile();
             fileManager.Modificato = true;
+           
         }
         private void tagliaToolStripButton_Click(object sender, EventArgs e)
         {
@@ -78,7 +79,6 @@ namespace AbrateEsWordpad
         private void annulla()
         {
             rtb.Undo(); 
-            
         }
 
         private void RipristinaToolStripButton_Click(object sender, EventArgs e)
@@ -94,5 +94,22 @@ namespace AbrateEsWordpad
         {
             rtb.Redo();
         }
+
+        private void AlignSxToolStripButton_Click(object sender, EventArgs e)
+        {
+            rtb.SelectionAlignment = HorizontalAlignment.Left;
+        }
+
+        private void AlignCenterToolStripButton_Click(object sender, EventArgs e)
+        {
+            rtb.SelectionAlignment = HorizontalAlignment.Center;
+        }
+
+        private void AlignRxToolStripButton_Click(object sender, EventArgs e)
+        {
+            rtb.SelectionAlignment = HorizontalAlignment.Right;
+        }
+
+      
     }
 }

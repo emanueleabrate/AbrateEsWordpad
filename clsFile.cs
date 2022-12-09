@@ -8,7 +8,7 @@ using System.IO;
 
 namespace clsFile_ns
 {
-    class clsFile
+    public class clsFile
     {
         //campi privati
         private string filename;

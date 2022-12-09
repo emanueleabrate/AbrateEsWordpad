@@ -115,7 +115,7 @@ namespace AbrateEsWordpad
             ColorDialog cd = new ColorDialog();
 
             if (cd.ShowDialog() == DialogResult.OK)
-                rtb.ForeColor = cd.Color;
+                rtb.SelectionColor = cd.Color;
         }
 
         private void FontToolStripButton_Click(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace AbrateEsWordpad
             FontDialog fd = new FontDialog();
 
             if (fd.ShowDialog() == DialogResult.OK)
-                rtb.Font = fd.Font;
+                rtb.SelectionFont = fd.Font;
         }
 
         private void ElencoPuntToolStripButton_Click(object sender, EventArgs e)

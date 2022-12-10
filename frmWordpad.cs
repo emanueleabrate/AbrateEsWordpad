@@ -46,7 +46,7 @@ namespace AbrateEsWordpad
             annulla = controllaModificato();
             if (!annulla)
             {
-                //pulisco textbox
+                
                 rtb.Clear();
                 fileManager.Modificato = false;
 
@@ -154,6 +154,7 @@ namespace AbrateEsWordpad
 
         private void ElencoPuntToolStripButton_Click(object sender, EventArgs e)
         {
+
             rtb.SelectionBullet = true;
         }
 
@@ -175,10 +176,9 @@ namespace AbrateEsWordpad
         private void salva(string testo)
         {
 
-
             if (fileManager.Modificato)
                 if (fileManager.Filename != "")
-                    rtb.SaveFile(rtb.Text);
+                    rtb.SaveFile(fileManager.Filename);
                 else
                     salvaconNome(this.Text);
         }
@@ -255,6 +255,47 @@ namespace AbrateEsWordpad
                 fileManager.Modificato = true;
             else
                 fileManager.Modificato = false;
+        }
+
+        private void BoldToolStripButton_Click(object sender, EventArgs e)
+        {
+
+            Font fontNew, fontOld;
+
+            fontOld = rtb.SelectionFont;
+            if(fontOld.Bold)
+                fontNew = new Font(fontOld, fontOld.Style & ~FontStyle.Bold);
+            else
+                fontNew = new Font(fontOld, fontOld.Style | FontStyle.Bold);
+
+            rtb.SelectionFont = fontNew;
+
+        }
+
+        private void ItalicToolStripButton_Click(object sender, EventArgs e)
+        {
+            Font fontNew, fontOld;
+
+            fontOld = rtb.SelectionFont;
+            if (fontOld.Italic)
+                fontNew = new Font(fontOld, fontOld.Style & ~FontStyle.Italic);
+            else
+                fontNew = new Font(fontOld, fontOld.Style | FontStyle.Italic);
+
+            rtb.SelectionFont = fontNew;
+        }
+
+        private void UnderlineToolStripButton_Click(object sender, EventArgs e)
+        {
+            Font fontNew, fontOld;
+
+            fontOld = rtb.SelectionFont;
+            if (fontOld.Underline)
+                fontNew = new Font(fontOld, fontOld.Style & ~FontStyle.Underline);
+            else
+                fontNew = new Font(fontOld, fontOld.Style | FontStyle.Underline);
+
+            rtb.SelectionFont = fontNew;
         }
     }
 }

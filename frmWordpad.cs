@@ -9,14 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using clsFile_ns;
-using static System.Net.Mime.MediaTypeNames;
+
 
 namespace AbrateEsWordpad
 {
     public partial class frmWordpad : Form
     {
 
-        clsFile fileManager;
+        private string fileName = null;
+        private bool modificato = false;
         public frmWordpad()
         {
             InitializeComponent();
@@ -24,8 +25,8 @@ namespace AbrateEsWordpad
 
         private void frmWordpad_Load(object sender, EventArgs e)
         {
-            fileManager = new clsFile();
-            fileManager.Modificato = true;
+            
+           
            
         }
 
@@ -46,9 +47,11 @@ namespace AbrateEsWordpad
             annulla = controllaModificato();
             if (!annulla)
             {
-                
+               
                 rtb.Clear();
-                fileManager.Modificato = false;
+                modificato = false;
+                fileName = null;
+                this.Text = null;
 
             }
             
@@ -160,67 +163,85 @@ namespace AbrateEsWordpad
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            nuovo();
             this.Close();
         }
 
         private void salvaToolStripButton_Click(object sender, EventArgs e)
         {
-            salva(rtb.Text);
+            salva();
         }
 
         private void salvaToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            salva(rtb.Text);
+            salva();
         }
 
-        private void salva(string testo)
+        private void salva()
         {
 
-            if (fileManager.Modificato)
-                if (fileManager.Filename != "")
-                    rtb.SaveFile(fileManager.Filename);
+            if (modificato)
+                if (!string.IsNullOrEmpty(fileName))
+                    rtb.SaveFile(fileName);
                 else
-                    salvaconNome(this.Text);
+                    salvaconNome();
         }
 
         private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            salvaconNome(rtb.Text);
+            salvaconNome();
         }
 
-        private void salvaconNome(string testo)
+        private void salvaconNome()
         {
             SaveFileDialog sfd = new SaveFileDialog();
             sfd.AddExtension = true;
 
-            sfd.Filter = "File wordpad (*.rtf)|.rtf";
+            sfd.Filter = "File wordpad (*.rtf)|*.rtf";
             sfd.Title = "Workpad - Salva con nome";
             DialogResult ris = sfd.ShowDialog();
             if (ris == DialogResult.OK)
             {
+                fileName = sfd.FileName;
                 rtb.SaveFile(sfd.FileName);
+                this.Text = sfd.FileName.ToString();
             }
 
-            this.Text = sfd.FileName.ToString();
+          
         }
 
         private bool controllaModificato()
         {
             bool annulla = false;
-            if (fileManager.Modificato)
+            if (modificato)
             {
-                //chiedo se si vuole salvare il documento aperto 
-                string nomeFile = fileManager.getFileName();
+                
+                string nomeFile = getFileNameRelativo();
                 DialogResult ris;
                 ris = MessageBox.Show("Salvare le modifiche a " + nomeFile, "File di testo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (ris == DialogResult.Yes)
-                    fileManager.salva(rtb.Text);
+                    salva();
                 else if (ris == DialogResult.Cancel)
                     annulla = true;
 
             }
 
             return annulla;
+        }
+
+        private string getFileNameRelativo()
+        {
+            string s = "";
+            if (!string.IsNullOrEmpty(fileName))
+            {
+               
+                int pos = fileName.LastIndexOf('\\');
+                s = fileName.Substring(pos + 1);
+            }
+            else
+                s = " senza nome ";
+
+            return s;
         }
 
         private void apriToolStripButton_Click(object sender, EventArgs e)
@@ -252,9 +273,9 @@ namespace AbrateEsWordpad
         private void rtb_TextChanged(object sender, EventArgs e)
         {
             if (rtb.Text.Length > 0)
-                fileManager.Modificato = true;
+                modificato = true;
             else
-                fileManager.Modificato = false;
+                modificato = false;
         }
 
         private void BoldToolStripButton_Click(object sender, EventArgs e)
@@ -296,6 +317,25 @@ namespace AbrateEsWordpad
                 fontNew = new Font(fontOld, fontOld.Style | FontStyle.Underline);
 
             rtb.SelectionFont = fontNew;
+        }
+
+        private void ImgToolStripButton_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog();
+
+            ofd.Filter = "(*.png)|*.png|(*.jpg)|*.jpg|(*.gif)|*.gif";
+
+            DialogResult ris;
+
+            ris = ofd.ShowDialog();
+
+            if(ris == DialogResult.OK)
+            {
+                Image img = Image.FromFile(ofd.FileName);
+                Clipboard.SetImage(img);
+                rtb.Paste();
+            }
+            
         }
     }
 }

@@ -64,6 +64,10 @@
             this.AnnullaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.RipristinaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.BoldToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.ItalicToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.UnderlineToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.AlignSxToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AlignCenterToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.AlignRxToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -73,10 +77,6 @@
             this.ImgToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ColorToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FontToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.BoldToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.ItalicToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.UnderlineToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator10 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -412,6 +412,41 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // BoldToolStripButton
+            // 
+            this.BoldToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.BoldToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("BoldToolStripButton.Image")));
+            this.BoldToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.BoldToolStripButton.Name = "BoldToolStripButton";
+            this.BoldToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.BoldToolStripButton.Text = "Grassetto";
+            this.BoldToolStripButton.Click += new System.EventHandler(this.BoldToolStripButton_Click);
+            // 
+            // ItalicToolStripButton
+            // 
+            this.ItalicToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ItalicToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ItalicToolStripButton.Image")));
+            this.ItalicToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ItalicToolStripButton.Name = "ItalicToolStripButton";
+            this.ItalicToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.ItalicToolStripButton.Text = "Corsivo";
+            this.ItalicToolStripButton.Click += new System.EventHandler(this.ItalicToolStripButton_Click);
+            // 
+            // UnderlineToolStripButton
+            // 
+            this.UnderlineToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.UnderlineToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("UnderlineToolStripButton.Image")));
+            this.UnderlineToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.UnderlineToolStripButton.Name = "UnderlineToolStripButton";
+            this.UnderlineToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.UnderlineToolStripButton.Text = "Sottolineato";
+            this.UnderlineToolStripButton.Click += new System.EventHandler(this.UnderlineToolStripButton_Click);
+            // 
+            // toolStripSeparator10
+            // 
+            this.toolStripSeparator10.Name = "toolStripSeparator10";
+            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
+            // 
             // AlignSxToolStripButton
             // 
             this.AlignSxToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -470,6 +505,7 @@
             this.ImgToolStripButton.Name = "ImgToolStripButton";
             this.ImgToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ImgToolStripButton.Text = "Immagine";
+            this.ImgToolStripButton.Click += new System.EventHandler(this.ImgToolStripButton_Click);
             // 
             // ColorToolStripButton
             // 
@@ -490,41 +526,6 @@
             this.FontToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.FontToolStripButton.Text = "Font";
             this.FontToolStripButton.Click += new System.EventHandler(this.FontToolStripButton_Click);
-            // 
-            // BoldToolStripButton
-            // 
-            this.BoldToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.BoldToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("BoldToolStripButton.Image")));
-            this.BoldToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.BoldToolStripButton.Name = "BoldToolStripButton";
-            this.BoldToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.BoldToolStripButton.Text = "Grassetto";
-            this.BoldToolStripButton.Click += new System.EventHandler(this.BoldToolStripButton_Click);
-            // 
-            // ItalicToolStripButton
-            // 
-            this.ItalicToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ItalicToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("ItalicToolStripButton.Image")));
-            this.ItalicToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.ItalicToolStripButton.Name = "ItalicToolStripButton";
-            this.ItalicToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.ItalicToolStripButton.Text = "Corsivo";
-            this.ItalicToolStripButton.Click += new System.EventHandler(this.ItalicToolStripButton_Click);
-            // 
-            // UnderlineToolStripButton
-            // 
-            this.UnderlineToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.UnderlineToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("UnderlineToolStripButton.Image")));
-            this.UnderlineToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.UnderlineToolStripButton.Name = "UnderlineToolStripButton";
-            this.UnderlineToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.UnderlineToolStripButton.Text = "Sottolineato";
-            this.UnderlineToolStripButton.Click += new System.EventHandler(this.UnderlineToolStripButton_Click);
-            // 
-            // toolStripSeparator10
-            // 
-            this.toolStripSeparator10.Name = "toolStripSeparator10";
-            this.toolStripSeparator10.Size = new System.Drawing.Size(6, 25);
             // 
             // frmWordpad
             // 

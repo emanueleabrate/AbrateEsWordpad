@@ -8,6 +8,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Microsoft.VisualBasic;
 using clsFile_ns;
 
 
@@ -266,7 +267,6 @@ namespace AbrateEsWordpad
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.AddExtension = true;
           
-
             ofd.Filter = "File wordpad (*.rtf)|.rtf";
             ofd.Title = "Workpad - Apri";
             DialogResult ris = ofd.ShowDialog();
@@ -345,6 +345,31 @@ namespace AbrateEsWordpad
                 rtb.Paste();
             }
             
+        }
+
+        private void FindToolStripButton_Click(object sender, EventArgs e)
+        {
+            string mex = Interaction.InputBox("Che parola vuoi cercare?", "Cerca");
+            int pos = 0;
+
+            if (!string.IsNullOrEmpty(mex))
+            {
+
+                while ((pos = rtb.Text.IndexOf(mex, pos, StringComparison.CurrentCultureIgnoreCase)) != -1)
+                {
+                    Console.WriteLine(pos.ToString());
+                    rtb.Select(pos, mex.Length);
+                    rtb.SelectionBackColor = Color.LightBlue;
+                    pos++;
+         
+                }
+                
+            }
+            else
+            {
+                MessageBox.Show("Inserire un valore valido ");
+            }
+
         }
     }
 }

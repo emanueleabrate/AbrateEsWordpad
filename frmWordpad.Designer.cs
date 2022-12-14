@@ -77,6 +77,8 @@
             this.ImgToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ColorToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.FontToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
+            this.FindToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -85,7 +87,7 @@
             // 
             this.rtb.Location = new System.Drawing.Point(-2, 52);
             this.rtb.Name = "rtb";
-            this.rtb.Size = new System.Drawing.Size(799, 403);
+            this.rtb.Size = new System.Drawing.Size(802, 403);
             this.rtb.TabIndex = 0;
             this.rtb.Text = "";
             this.rtb.TextChanged += new System.EventHandler(this.rtb_TextChanged);
@@ -301,7 +303,9 @@
             this.toolStripSeparator7,
             this.ImgToolStripButton,
             this.ColorToolStripButton,
-            this.FontToolStripButton});
+            this.FontToolStripButton,
+            this.toolStripSeparator11,
+            this.FindToolStripButton});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -527,6 +531,21 @@
             this.FontToolStripButton.Text = "Font";
             this.FontToolStripButton.Click += new System.EventHandler(this.FontToolStripButton_Click);
             // 
+            // toolStripSeparator11
+            // 
+            this.toolStripSeparator11.Name = "toolStripSeparator11";
+            this.toolStripSeparator11.Size = new System.Drawing.Size(6, 25);
+            // 
+            // FindToolStripButton
+            // 
+            this.FindToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.FindToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("FindToolStripButton.Image")));
+            this.FindToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.FindToolStripButton.Name = "FindToolStripButton";
+            this.FindToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.FindToolStripButton.Text = "Trova";
+            this.FindToolStripButton.Click += new System.EventHandler(this.FindToolStripButton_Click);
+            // 
             // frmWordpad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -597,6 +616,8 @@
         private System.Windows.Forms.ToolStripButton ItalicToolStripButton;
         private System.Windows.Forms.ToolStripButton UnderlineToolStripButton;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator10;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator11;
+        private System.Windows.Forms.ToolStripButton FindToolStripButton;
     }
 }
 

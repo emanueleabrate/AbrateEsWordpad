@@ -27,7 +27,6 @@ namespace AbrateEsWordpad
         {
             
            
-           
         }
 
 
@@ -41,7 +40,7 @@ namespace AbrateEsWordpad
             nuovo();
         }
 
-        private void nuovo()
+        private bool nuovo()
         {
             bool annulla = false;
             annulla = controllaModificato();
@@ -54,7 +53,8 @@ namespace AbrateEsWordpad
                 this.Text = null;
 
             }
-            
+
+            return annulla;
         }
         private void tagliaToolStripButton_Click(object sender, EventArgs e)
         {
@@ -163,8 +163,8 @@ namespace AbrateEsWordpad
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            nuovo();
-            this.Close();
+            if(!nuovo())
+                this.Close();
         }
 
         private void salvaToolStripButton_Click(object sender, EventArgs e)
@@ -179,8 +179,8 @@ namespace AbrateEsWordpad
 
         private void salva()
         {
-
-            if (modificato)
+            Console.WriteLine(fileName);
+           
                 if (!string.IsNullOrEmpty(fileName))
                     rtb.SaveFile(fileName);
                 else
@@ -246,12 +246,18 @@ namespace AbrateEsWordpad
 
         private void apriToolStripButton_Click(object sender, EventArgs e)
         {
-            apri();
+            bool annulla = false;
+            annulla = controllaModificato();
+            if(!annulla)
+                apri();
         }
 
         private void apriToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            apri();
+            bool annulla = false;
+            annulla = controllaModificato();
+            if (!annulla)
+                apri();
         }
 
         private void apri()
@@ -259,13 +265,16 @@ namespace AbrateEsWordpad
 
             OpenFileDialog ofd = new OpenFileDialog();
             ofd.AddExtension = true;
+          
 
             ofd.Filter = "File wordpad (*.rtf)|.rtf";
             ofd.Title = "Workpad - Apri";
             DialogResult ris = ofd.ShowDialog();
             if (ris == DialogResult.OK)
             {
+                fileName = ofd.FileName;
                 rtb.LoadFile(ofd.FileName);
+                this.Text = ofd.FileName;
             }
 
         }

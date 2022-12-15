@@ -159,12 +159,12 @@ namespace AbrateEsWordpad
         private void ElencoPuntToolStripButton_Click(object sender, EventArgs e)
         {
 
-            rtb.SelectionBullet = true;
+            rtb.SelectionBullet = !rtb.SelectionBullet;
         }
 
         private void esciToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if(!nuovo())
+            if(!nuovo() || modificato == false)
                 this.Close();
         }
 
@@ -180,12 +180,14 @@ namespace AbrateEsWordpad
 
         private void salva()
         {
-            Console.WriteLine(fileName);
+            //Console.WriteLine(fileName);
            
                 if (!string.IsNullOrEmpty(fileName))
                     rtb.SaveFile(fileName);
                 else
                     salvaconNome();
+
+                
         }
 
         private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -369,9 +371,11 @@ namespace AbrateEsWordpad
             {
                 MessageBox.Show("Inserire un valore valido ");
             }
-
         }
 
-      
+        private void selezionatuttoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtb.SelectAll();    
+        }
     }
 }

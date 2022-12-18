@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
 using clsFile_ns;
-
+using System.IO;
 
 namespace AbrateEsWordpad
 {
@@ -19,6 +19,7 @@ namespace AbrateEsWordpad
 
         private string fileName = null;
         private bool modificato = false;
+        
         public frmWordpad()
         {
             InitializeComponent();
@@ -26,7 +27,7 @@ namespace AbrateEsWordpad
 
         private void frmWordpad_Load(object sender, EventArgs e)
         {
-            
+            rtb.AcceptsTab = true;
            
         }
 
@@ -47,11 +48,13 @@ namespace AbrateEsWordpad
             annulla = controllaModificato();
             if (!annulla)
             {
-               
+              
                 rtb.Clear();
                 modificato = false;
                 fileName = null;
                 this.Text = null;
+                rtb.SelectionAlignment = HorizontalAlignment.Left;
+                rtb.SelectionFont = RichTextBox.DefaultFont;
 
             }
 
@@ -158,7 +161,6 @@ namespace AbrateEsWordpad
 
         private void ElencoPuntToolStripButton_Click(object sender, EventArgs e)
         {
-
             rtb.SelectionBullet = !rtb.SelectionBullet;
         }
 
@@ -209,8 +211,7 @@ namespace AbrateEsWordpad
                 rtb.SaveFile(sfd.FileName);
                 this.Text = sfd.FileName.ToString();
             }
-
-          
+  
         }
 
         private bool controllaModificato()
@@ -237,9 +238,7 @@ namespace AbrateEsWordpad
             string s = "";
             if (!string.IsNullOrEmpty(fileName))
             {
-               
-                int pos = fileName.LastIndexOf('\\');
-                s = fileName.Substring(pos + 1);
+                s = Path.GetFileName(fileName);
             }
             else
                 s = " senza nome ";
@@ -328,6 +327,7 @@ namespace AbrateEsWordpad
                 fontNew = new Font(fontOld, fontOld.Style | FontStyle.Underline);
 
             rtb.SelectionFont = fontNew;
+
         }
 
         private void ImgToolStripButton_Click(object sender, EventArgs e)
@@ -352,30 +352,67 @@ namespace AbrateEsWordpad
         private void FindToolStripButton_Click(object sender, EventArgs e)
         {
             string mex = Interaction.InputBox("Che parola vuoi cercare?", "Cerca");
+     
             int pos = 0;
 
-            if (!string.IsNullOrEmpty(mex))
+            if (!String.IsNullOrEmpty(mex))
             {
-
                 while ((pos = rtb.Text.IndexOf(mex, pos, StringComparison.CurrentCultureIgnoreCase)) != -1)
                 {
                     Console.WriteLine(pos.ToString());
                     rtb.Select(pos, mex.Length);
                     rtb.SelectionBackColor = Color.LightBlue;
                     pos++;
-         
+                    rtb.Select(pos + mex.Length, 0);
+                    rtb.SelectionBackColor = Color.White;
+                   
+
                 }
-                
+
+                rtb.SelectedText = " ";
+               
             }
-            else
+            
+
+            if (mex == "")
             {
-                MessageBox.Show("Inserire un valore valido ");
+                MessageBox.Show("Inserire un valore valido");
             }
         }
 
         private void selezionatuttoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            rtb.SelectAll();    
+            rtb.SelectAll();       
+        }
+
+        static bool isApice = false;
+        private void SupToolStripButton_Click(object sender, EventArgs e)
+        {
+            isApice = !isApice;
+
+            if (isApice)
+            {
+                rtb.SelectionCharOffset = 5;           
+            }
+            else
+            {
+                rtb.SelectionCharOffset = 0;
+            }              
+        }
+
+        static bool isPedice = false;
+        private void SubToolStripButton_Click(object sender, EventArgs e)
+        {
+            isPedice = !isPedice;
+
+            if (isPedice)
+            {
+                rtb.SelectionCharOffset = -5;
+            }
+            else
+            {
+                rtb.SelectionCharOffset = 0;
+            }
         }
     }
 }

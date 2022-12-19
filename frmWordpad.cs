@@ -197,7 +197,7 @@ namespace AbrateEsWordpad
             sfd.AddExtension = true;
 
             sfd.Filter = "File wordpad (*.rtf)|*.rtf";
-            sfd.Title = "Workpad - Salva con nome";
+            sfd.Title = "Wordpad - Salva con nome";
             DialogResult ris = sfd.ShowDialog();
             if (ris == DialogResult.OK)
             {
@@ -263,7 +263,7 @@ namespace AbrateEsWordpad
             ofd.AddExtension = true;
           
             ofd.Filter = "File wordpad (*.rtf)|.rtf";
-            ofd.Title = "Workpad - Apri";
+            ofd.Title = "Wordpad - Apri";
             DialogResult ris = ofd.ShowDialog();
             if (ris == DialogResult.OK)
             {

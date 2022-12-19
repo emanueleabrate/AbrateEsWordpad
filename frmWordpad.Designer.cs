@@ -60,6 +60,9 @@
             this.AnnullaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.RipristinaToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator5 = new System.Windows.Forms.ToolStripSeparator();
+            this.SupToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.SubToolStripButton = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.BoldToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.ItalicToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.UnderlineToolStripButton = new System.Windows.Forms.ToolStripButton();
@@ -75,9 +78,6 @@
             this.FontToolStripButton = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator11 = new System.Windows.Forms.ToolStripSeparator();
             this.FindToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.SupToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.SubToolStripButton = new System.Windows.Forms.ToolStripButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -387,6 +387,31 @@
             this.toolStripSeparator5.Name = "toolStripSeparator5";
             this.toolStripSeparator5.Size = new System.Drawing.Size(6, 25);
             // 
+            // SupToolStripButton
+            // 
+            this.SupToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SupToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SupToolStripButton.Image")));
+            this.SupToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SupToolStripButton.Name = "SupToolStripButton";
+            this.SupToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.SupToolStripButton.Text = "Apice";
+            this.SupToolStripButton.Click += new System.EventHandler(this.supToolStripButton_Click);
+            // 
+            // SubToolStripButton
+            // 
+            this.SubToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.SubToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SubToolStripButton.Image")));
+            this.SubToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.SubToolStripButton.Name = "SubToolStripButton";
+            this.SubToolStripButton.Size = new System.Drawing.Size(23, 22);
+            this.SubToolStripButton.Text = "Pedice";
+            this.SubToolStripButton.Click += new System.EventHandler(this.subToolStripButton_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
             // BoldToolStripButton
             // 
             this.BoldToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
@@ -517,31 +542,6 @@
             this.FindToolStripButton.Text = "Trova";
             this.FindToolStripButton.Click += new System.EventHandler(this.findToolStripButton_Click);
             // 
-            // SupToolStripButton
-            // 
-            this.SupToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SupToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SupToolStripButton.Image")));
-            this.SupToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SupToolStripButton.Name = "SupToolStripButton";
-            this.SupToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.SupToolStripButton.Text = "Apice";
-            this.SupToolStripButton.Click += new System.EventHandler(this.supToolStripButton_Click);
-            // 
-            // SubToolStripButton
-            // 
-            this.SubToolStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.SubToolStripButton.Image = ((System.Drawing.Image)(resources.GetObject("SubToolStripButton.Image")));
-            this.SubToolStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.SubToolStripButton.Name = "SubToolStripButton";
-            this.SubToolStripButton.Size = new System.Drawing.Size(23, 22);
-            this.SubToolStripButton.Text = "Pedice";
-            this.SubToolStripButton.Click += new System.EventHandler(this.subToolStripButton_Click);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
-            // 
             // frmWordpad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -554,6 +554,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frmWordpad";
             this.Text = "Wordpad";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmWordpad_FormClosing);
             this.Load += new System.EventHandler(this.frmWordpad_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

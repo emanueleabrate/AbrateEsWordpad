@@ -216,7 +216,7 @@ namespace AbrateEsWordpad
                 
                 string nomeFile = getFileNameRelativo();
                 DialogResult ris;
-                ris = MessageBox.Show("Salvare le modifiche a " + nomeFile, "File di testo", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                ris = MessageBox.Show("Salvare le modifiche a" + nomeFile, "File rtf", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (ris == DialogResult.Yes)
                     salva();
                 else if (ris == DialogResult.Cancel)
@@ -406,6 +406,16 @@ namespace AbrateEsWordpad
             else
             {
                 rtb.SelectionCharOffset = 0;
+            }
+        }
+
+        private void frmWordpad_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            bool annulla = false;
+            annulla = controllaModificato();
+            if (annulla)
+            {
+                e.Cancel = true;
             }
         }
     }

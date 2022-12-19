@@ -49,7 +49,7 @@ namespace AbrateEsWordpad
                 rtb.Clear();
                 modificato = false;
                 fileName = null;
-                this.Text = null;
+                this.Text = "senza nome";
                 rtb.SelectionAlignment = HorizontalAlignment.Left;
                 rtb.SelectionFont = RichTextBox.DefaultFont;
 
@@ -216,7 +216,7 @@ namespace AbrateEsWordpad
                 
                 string nomeFile = getFileNameRelativo();
                 DialogResult ris;
-                ris = MessageBox.Show("Salvare le modifiche a" + nomeFile, "File rtf", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
+                ris = MessageBox.Show("Salvare le modifiche a " + nomeFile, "File rtf", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Question);
                 if (ris == DialogResult.Yes)
                     salva();
                 else if (ris == DialogResult.Cancel)

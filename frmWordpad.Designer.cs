@@ -370,7 +370,7 @@
             this.AnnullaToolStripButton.Name = "AnnullaToolStripButton";
             this.AnnullaToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AnnullaToolStripButton.Text = "Annulla";
-            this.AnnullaToolStripButton.Click += new System.EventHandler(this.AnnullaToolStripButton_Click);
+            this.AnnullaToolStripButton.Click += new System.EventHandler(this.annullaToolStripButton_Click);
             // 
             // RipristinaToolStripButton
             // 
@@ -380,7 +380,7 @@
             this.RipristinaToolStripButton.Name = "RipristinaToolStripButton";
             this.RipristinaToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.RipristinaToolStripButton.Text = "Ripristina";
-            this.RipristinaToolStripButton.Click += new System.EventHandler(this.RipristinaToolStripButton_Click);
+            this.RipristinaToolStripButton.Click += new System.EventHandler(this.ripristinaToolStripButton_Click);
             // 
             // toolStripSeparator5
             // 
@@ -395,7 +395,7 @@
             this.BoldToolStripButton.Name = "BoldToolStripButton";
             this.BoldToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.BoldToolStripButton.Text = "Grassetto";
-            this.BoldToolStripButton.Click += new System.EventHandler(this.BoldToolStripButton_Click);
+            this.BoldToolStripButton.Click += new System.EventHandler(this.boldToolStripButton_Click);
             // 
             // ItalicToolStripButton
             // 
@@ -405,7 +405,7 @@
             this.ItalicToolStripButton.Name = "ItalicToolStripButton";
             this.ItalicToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ItalicToolStripButton.Text = "Corsivo";
-            this.ItalicToolStripButton.Click += new System.EventHandler(this.ItalicToolStripButton_Click);
+            this.ItalicToolStripButton.Click += new System.EventHandler(this.italicToolStripButton_Click);
             // 
             // UnderlineToolStripButton
             // 
@@ -415,7 +415,7 @@
             this.UnderlineToolStripButton.Name = "UnderlineToolStripButton";
             this.UnderlineToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.UnderlineToolStripButton.Text = "Sottolineato";
-            this.UnderlineToolStripButton.Click += new System.EventHandler(this.UnderlineToolStripButton_Click);
+            this.UnderlineToolStripButton.Click += new System.EventHandler(this.underlineToolStripButton_Click);
             // 
             // toolStripSeparator10
             // 
@@ -430,7 +430,7 @@
             this.AlignSxToolStripButton.Name = "AlignSxToolStripButton";
             this.AlignSxToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignSxToolStripButton.Text = "Allineamento a sinistra";
-            this.AlignSxToolStripButton.Click += new System.EventHandler(this.AlignSxToolStripButton_Click);
+            this.AlignSxToolStripButton.Click += new System.EventHandler(this.alignSxToolStripButton_Click);
             // 
             // AlignCenterToolStripButton
             // 
@@ -440,7 +440,7 @@
             this.AlignCenterToolStripButton.Name = "AlignCenterToolStripButton";
             this.AlignCenterToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignCenterToolStripButton.Text = "Allineamento centrato";
-            this.AlignCenterToolStripButton.Click += new System.EventHandler(this.AlignCenterToolStripButton_Click);
+            this.AlignCenterToolStripButton.Click += new System.EventHandler(this.alignCenterToolStripButton_Click);
             // 
             // AlignRxToolStripButton
             // 
@@ -450,7 +450,7 @@
             this.AlignRxToolStripButton.Name = "AlignRxToolStripButton";
             this.AlignRxToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.AlignRxToolStripButton.Text = "Allineamento a destra";
-            this.AlignRxToolStripButton.Click += new System.EventHandler(this.AlignRxToolStripButton_Click);
+            this.AlignRxToolStripButton.Click += new System.EventHandler(this.alignRxToolStripButton_Click);
             // 
             // toolStripSeparator6
             // 
@@ -465,7 +465,7 @@
             this.ElencoPuntToolStripButton.Name = "ElencoPuntToolStripButton";
             this.ElencoPuntToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ElencoPuntToolStripButton.Text = "Elenco puntato";
-            this.ElencoPuntToolStripButton.Click += new System.EventHandler(this.ElencoPuntToolStripButton_Click);
+            this.ElencoPuntToolStripButton.Click += new System.EventHandler(this.elencoPuntToolStripButton_Click);
             // 
             // toolStripSeparator7
             // 
@@ -480,7 +480,7 @@
             this.ImgToolStripButton.Name = "ImgToolStripButton";
             this.ImgToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ImgToolStripButton.Text = "Immagine";
-            this.ImgToolStripButton.Click += new System.EventHandler(this.ImgToolStripButton_Click);
+            this.ImgToolStripButton.Click += new System.EventHandler(this.imgToolStripButton_Click);
             // 
             // ColorToolStripButton
             // 
@@ -490,7 +490,7 @@
             this.ColorToolStripButton.Name = "ColorToolStripButton";
             this.ColorToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.ColorToolStripButton.Text = "Colore";
-            this.ColorToolStripButton.Click += new System.EventHandler(this.ColorToolStripButton_Click);
+            this.ColorToolStripButton.Click += new System.EventHandler(this.colorToolStripButton_Click);
             // 
             // FontToolStripButton
             // 
@@ -500,7 +500,7 @@
             this.FontToolStripButton.Name = "FontToolStripButton";
             this.FontToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.FontToolStripButton.Text = "Font";
-            this.FontToolStripButton.Click += new System.EventHandler(this.FontToolStripButton_Click);
+            this.FontToolStripButton.Click += new System.EventHandler(this.fontToolStripButton_Click);
             // 
             // toolStripSeparator11
             // 
@@ -515,7 +515,7 @@
             this.FindToolStripButton.Name = "FindToolStripButton";
             this.FindToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.FindToolStripButton.Text = "Trova";
-            this.FindToolStripButton.Click += new System.EventHandler(this.FindToolStripButton_Click);
+            this.FindToolStripButton.Click += new System.EventHandler(this.findToolStripButton_Click);
             // 
             // SupToolStripButton
             // 
@@ -525,7 +525,7 @@
             this.SupToolStripButton.Name = "SupToolStripButton";
             this.SupToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.SupToolStripButton.Text = "Apice";
-            this.SupToolStripButton.Click += new System.EventHandler(this.SupToolStripButton_Click);
+            this.SupToolStripButton.Click += new System.EventHandler(this.supToolStripButton_Click);
             // 
             // SubToolStripButton
             // 
@@ -535,7 +535,7 @@
             this.SubToolStripButton.Name = "SubToolStripButton";
             this.SubToolStripButton.Size = new System.Drawing.Size(23, 22);
             this.SubToolStripButton.Text = "Pedice";
-            this.SubToolStripButton.Click += new System.EventHandler(this.SubToolStripButton_Click);
+            this.SubToolStripButton.Click += new System.EventHandler(this.subToolStripButton_Click);
             // 
             // toolStripSeparator1
             // 

@@ -9,7 +9,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.VisualBasic;
-using clsFile_ns;
 using System.IO;
 
 namespace AbrateEsWordpad
@@ -27,10 +26,8 @@ namespace AbrateEsWordpad
 
         private void frmWordpad_Load(object sender, EventArgs e)
         {
-            rtb.AcceptsTab = true;
-           
+            rtb.AcceptsTab = true;       
         }
-
 
         private void nuovoToolStripButton_Click(object sender, EventArgs e)
         {
@@ -99,7 +96,7 @@ namespace AbrateEsWordpad
             rtb.Paste();
         }
 
-        private void AnnullaToolStripButton_Click(object sender, EventArgs e)
+        private void annullaToolStripButton_Click(object sender, EventArgs e)
         {
             annulla();
         }
@@ -114,7 +111,7 @@ namespace AbrateEsWordpad
             rtb.Undo(); 
         }
 
-        private void RipristinaToolStripButton_Click(object sender, EventArgs e)
+        private void ripristinaToolStripButton_Click(object sender, EventArgs e)
         {
             ripristina();
         }
@@ -128,22 +125,22 @@ namespace AbrateEsWordpad
             rtb.Redo();
         }
 
-        private void AlignSxToolStripButton_Click(object sender, EventArgs e)
+        private void alignSxToolStripButton_Click(object sender, EventArgs e)
         {
             rtb.SelectionAlignment = HorizontalAlignment.Left;
         }
 
-        private void AlignCenterToolStripButton_Click(object sender, EventArgs e)
+        private void alignCenterToolStripButton_Click(object sender, EventArgs e)
         {
             rtb.SelectionAlignment = HorizontalAlignment.Center;
         }
 
-        private void AlignRxToolStripButton_Click(object sender, EventArgs e)
+        private void alignRxToolStripButton_Click(object sender, EventArgs e)
         {
             rtb.SelectionAlignment = HorizontalAlignment.Right;
         }
 
-        private void ColorToolStripButton_Click(object sender, EventArgs e)
+        private void colorToolStripButton_Click(object sender, EventArgs e)
         {
             ColorDialog cd = new ColorDialog();
 
@@ -151,7 +148,7 @@ namespace AbrateEsWordpad
                 rtb.SelectionColor = cd.Color;
         }
 
-        private void FontToolStripButton_Click(object sender, EventArgs e)
+        private void fontToolStripButton_Click(object sender, EventArgs e)
         {
             FontDialog fd = new FontDialog();
 
@@ -159,7 +156,7 @@ namespace AbrateEsWordpad
                 rtb.SelectionFont = fd.Font;
         }
 
-        private void ElencoPuntToolStripButton_Click(object sender, EventArgs e)
+        private void elencoPuntToolStripButton_Click(object sender, EventArgs e)
         {
             rtb.SelectionBullet = !rtb.SelectionBullet;
         }
@@ -182,14 +179,11 @@ namespace AbrateEsWordpad
 
         private void salva()
         {
-            //Console.WriteLine(fileName);
            
                 if (!string.IsNullOrEmpty(fileName))
                     rtb.SaveFile(fileName);
                 else
-                    salvaconNome();
-
-                
+                    salvaconNome();              
         }
 
         private void salvaconnomeToolStripMenuItem_Click(object sender, EventArgs e)
@@ -288,7 +282,7 @@ namespace AbrateEsWordpad
                 modificato = false;
         }
 
-        private void BoldToolStripButton_Click(object sender, EventArgs e)
+        private void boldToolStripButton_Click(object sender, EventArgs e)
         {
 
             Font fontNew, fontOld;
@@ -303,7 +297,7 @@ namespace AbrateEsWordpad
 
         }
 
-        private void ItalicToolStripButton_Click(object sender, EventArgs e)
+        private void italicToolStripButton_Click(object sender, EventArgs e)
         {
             Font fontNew, fontOld;
 
@@ -316,7 +310,7 @@ namespace AbrateEsWordpad
             rtb.SelectionFont = fontNew;
         }
 
-        private void UnderlineToolStripButton_Click(object sender, EventArgs e)
+        private void underlineToolStripButton_Click(object sender, EventArgs e)
         {
             Font fontNew, fontOld;
 
@@ -330,7 +324,7 @@ namespace AbrateEsWordpad
 
         }
 
-        private void ImgToolStripButton_Click(object sender, EventArgs e)
+        private void imgToolStripButton_Click(object sender, EventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog();
 
@@ -349,7 +343,7 @@ namespace AbrateEsWordpad
             
         }
 
-        private void FindToolStripButton_Click(object sender, EventArgs e)
+        private void findToolStripButton_Click(object sender, EventArgs e)
         {
             string mex = Interaction.InputBox("Che parola vuoi cercare?", "Cerca");
      
@@ -386,7 +380,7 @@ namespace AbrateEsWordpad
         }
 
         static bool isApice = false;
-        private void SupToolStripButton_Click(object sender, EventArgs e)
+        private void supToolStripButton_Click(object sender, EventArgs e)
         {
             isApice = !isApice;
 
@@ -401,7 +395,7 @@ namespace AbrateEsWordpad
         }
 
         static bool isPedice = false;
-        private void SubToolStripButton_Click(object sender, EventArgs e)
+        private void subToolStripButton_Click(object sender, EventArgs e)
         {
             isPedice = !isPedice;
 
